@@ -71,12 +71,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\IMonkeyRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\MockRepository.cs" />
     <Compile Include="Banana.cs" />
     <Compile Include="Repository\NHibernate\Maps\BananaMap.cs" />
     <Compile Include="Repository\NHibernate\Maps\MonkeyMap.cs" />
     <Compile Include="Monkey.cs" />
+    <Compile Include="Repository\NHibernate\MonkeyRepository.cs" />
     <Compile Include="Repository\NHibernate\NHibernateRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
