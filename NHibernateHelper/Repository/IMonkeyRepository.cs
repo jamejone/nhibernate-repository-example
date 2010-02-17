@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NHibernateHelper.Repository
+namespace RepositoryExample.Repository
 {
     public interface IMonkeyRepository : IRepository<Monkey>
     {

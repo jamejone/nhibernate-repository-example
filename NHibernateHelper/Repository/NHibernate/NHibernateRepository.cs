@@ -5,7 +5,7 @@ using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 
-namespace NHibernateHelper.Repository.NHibernate
+namespace RepositoryExample.Repository.NHibernate
 {
     public class NHibernateRepository<T> : IRepository<T> where T : class
     {
@@ -18,7 +18,7 @@ namespace NHibernateHelper.Repository.NHibernate
                 .Database(
                     MsSqlConfiguration
                     .MsSql2008
-                    .ConnectionString(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=TestDB;Integrated Security=True"))
+                    .ConnectionString(@"Data Source=JD;Initial Catalog=test;Integrated Security=True"))
                     .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernateRepository<T>>())
                 .BuildConfiguration();
 
