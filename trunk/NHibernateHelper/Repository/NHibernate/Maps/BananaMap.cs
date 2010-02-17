@@ -1,6 +1,6 @@
 ﻿using FluentNHibernate.Mapping;
 
-namespace NHibernateHelper.Maps
+namespace RepositoryExample.Maps
 {
     public class BananaMap : ClassMap<Banana>
     {

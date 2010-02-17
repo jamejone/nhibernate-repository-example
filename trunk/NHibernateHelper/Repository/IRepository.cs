@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NHibernateHelper.Repository
+namespace RepositoryExample.Repository
 {
     /// <summary>
     /// Should you ever need to add functionality specific to a single class, extend

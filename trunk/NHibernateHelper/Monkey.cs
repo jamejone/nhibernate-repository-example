@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NHibernateHelper
+namespace RepositoryExample
 {
     public class Monkey
     {

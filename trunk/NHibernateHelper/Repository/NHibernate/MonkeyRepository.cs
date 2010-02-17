@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using NHibernate.Criterion;
 
-namespace NHibernateHelper.Repository.NHibernate
+namespace RepositoryExample.Repository.NHibernate
 {
     public class MonkeyRepository : NHibernateRepository<Monkey>, IMonkeyRepository
     {

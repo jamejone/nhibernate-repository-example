@@ -1,4 +1,4 @@
-﻿namespace NHibernateHelper
+﻿namespace RepositoryExample
 {
     public class Banana
     {
