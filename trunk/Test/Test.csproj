@@ -76,9 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NHibernateHelper\NHibernateHelper.csproj">
+    <ProjectReference Include="..\RepositoryExample\RepositoryExample.csproj">
       <Project>{1AA232BD-6D2B-4E68-A32E-F80D579A1EB9}</Project>
-      <Name>NHibernateHelper</Name>
+      <Name>RepositoryExample</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

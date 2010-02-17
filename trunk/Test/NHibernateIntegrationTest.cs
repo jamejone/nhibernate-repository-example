@@ -1,6 +1,10 @@
+<<<<<<< .mine
+﻿using RepositoryExample.Repository.NHibernate;
+=======
 ﻿using NHibernateHelper;
 using NHibernateHelper.Repository;
 using NHibernateHelper.Repository.NHibernate;
+>>>>>>> .r5
 using NUnit.Framework;
 using System.Collections.Generic;
 
