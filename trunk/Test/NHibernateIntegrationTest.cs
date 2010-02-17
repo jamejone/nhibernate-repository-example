@@ -1,12 +1,8 @@
-<<<<<<< .mine
-﻿using RepositoryExample.Repository.NHibernate;
-=======
-﻿using NHibernateHelper;
-using NHibernateHelper.Repository;
-using NHibernateHelper.Repository.NHibernate;
->>>>>>> .r5
+﻿using System.Collections.Generic;
 using NUnit.Framework;
-using System.Collections.Generic;
+using RepositoryExample;
+using RepositoryExample.Repository;
+using RepositoryExample.Repository.NHibernate;
 
 namespace Test
 {
