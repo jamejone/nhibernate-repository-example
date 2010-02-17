@@ -9,8 +9,8 @@ namespace NHibernateHelper.Repository.NHibernate
 {
     public class NHibernateRepository<T> : IRepository<T> where T : class
     {
-        Configuration config;
-        ISessionFactory sessionFactory;
+        protected Configuration config;
+        protected ISessionFactory sessionFactory;
 
         public NHibernateRepository()
         {
@@ -29,35 +29,52 @@ namespace NHibernateHelper.Repository.NHibernate
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
-                return session.Get<T>(id);
+            {
+                T returnVal = session.Get<T>(id);
+                transaction.Commit();
+                return returnVal;
+            }
         }
 
-        public T Save(T value)
+        public void Save(T value)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
-                return (T)session.Save(value);
+            {
+                session.Save(value);
+                transaction.Commit();
+            }
         }
 
         public void Update(T value)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
+            {
                 session.Update(value);
+                transaction.Commit();
+            }
         }
 
         public void Delete(T value)
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
+            {
                 session.Delete(value);
+                transaction.Commit();
+            }
         }
 
         public IList<T> GetAll()
         {
             using (var session = sessionFactory.OpenSession())
             using (var transaction = session.BeginTransaction())
-                return session.CreateCriteria<T>().List<T>();
+            {
+                IList<T> returnVal = session.CreateCriteria<T>().List<T>();
+                transaction.Commit();
+                return returnVal;
+            }
         }
 
         public void GenerateSchema(SanityCheck AreYouSure)
